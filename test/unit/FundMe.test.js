@@ -47,7 +47,7 @@ const { developmentChains } = require("../../helper-hardhat-config")
               })
               it("Adds funder to array of funders", async () => {
                   await fundMe.fund({ value: sendValue })
-                  const response = await fundMe.getFunder(0)
+                  const response = await fundMe.funders(0)
                   assert.equal(response, deployer)
               })
           })
